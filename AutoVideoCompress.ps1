@@ -47,7 +47,7 @@ if ($result -eq [System.Windows.Forms.DialogResult]::OK)
     $DesiredSize = [convert]::ToDecimal($textBox.Text)
 }
 
-############################### Video Bitrate Calculation ###################################
+############################### Video Bitrate Calculation ####################################
 
 $VideoSize = ffprobe -v error -select_streams v:0 -show_entries format=size -of default=noprint_wrappers=1:nokey=1 $InputFile.FileName
 $VideoSize = [convert]::ToDecimal($VideoSize)
